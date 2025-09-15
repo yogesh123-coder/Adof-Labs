@@ -17,23 +17,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16">
-          <Link to="/system-features" className="p-1 flex justify-center items-center">
-            <div className="text-white text-2xl sm:text-[40px] font-space-grotesk font-normal uppercase leading-[28.80px] sm:leading-[38.40px] hover:text-white/80 transition-colors cursor-pointer">
-              System Features
-            </div>
-          </Link>
-          <Link to="/results" className="p-1 flex justify-center items-center">
-            <div className="text-white text-2xl sm:text-[40px] font-space-grotesk font-normal uppercase leading-[28.80px] sm:leading-[38.40px] hover:text-white/80 transition-colors cursor-pointer">
-              Results
-            </div>
-          </Link>
-          <Link to="/schedule-call" className="p-1 flex justify-center items-center">
-            <div className="text-white text-2xl sm:text-[40px] font-space-grotesk font-normal uppercase leading-[28.80px] sm:leading-[38.40px] hover:text-white/80 transition-colors cursor-pointer">
-              Schedule a Call
-            </div>
-          </Link>
-        </div>
+        
 
         {/* Copyright and Legal */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-3">
