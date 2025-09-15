@@ -53,8 +53,7 @@ const FeaturesSection = () => {
         {/* Features Grid */}
         <ScrollAnimation>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
-            {features.map((feature, index) => (
-              <div key={index} className={`${feature.className} bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group h-full flex flex-col`}>
+            {features.map((feature, index) => <div key={index} className={`${feature.className} bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group h-full flex flex-col`}>
                 {/* Icon */}
                 <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -67,8 +66,7 @@ const FeaturesSection = () => {
                 <div className="text-white/70 font-poppins text-sm leading-[1.7] tracking-wide flex-1">
                   {feature.description.split('\n').map((line, i) => <div key={i}>{line}</div>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </ScrollAnimation>
       </div>
