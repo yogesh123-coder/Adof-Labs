@@ -22,16 +22,12 @@ const CTASection = () => {
             </p>
           </div>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Link to="/schedule-call" className="px-8 py-4 bg-white text-black font-dm-mono font-medium uppercase tracking-wider rounded-lg hover:bg-gray-100 transition-all inline-flex items-center gap-3">
+          {/* CTA Button */}
+          <div className="flex justify-center items-center mb-16">
+            <Link to="/schedule-call" className="px-6 py-3 bg-white text-black font-dm-mono font-medium uppercase tracking-wider rounded-lg hover:bg-gray-100 transition-all inline-flex items-center gap-2 text-sm">
               <Calendar className="w-4 h-4" />
               Schedule Free Call
             </Link>
-            <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-dm-mono font-medium uppercase tracking-wider rounded-lg hover:bg-white/20 transition-all inline-flex items-center gap-3">
-              View Demo
-              <ArrowRight className="w-4 h-4" />
-            </button>
           </div>
           
           {/* Trust Indicators */}

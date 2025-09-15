@@ -6,6 +6,7 @@ import OurWorksSection from "@/components/OurWorksSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 const Index = () => {
   return (
@@ -15,16 +16,26 @@ const Index = () => {
       
       {/* System section slides over hero */}
       <div className="slide-over-section">
-        <WhatIsSystemSection />
+        <ScrollAnimation>
+          <WhatIsSystemSection />
+        </ScrollAnimation>
       </div>
       
       {/* Normal scrolling sections */}
       <div className="normal-scroll">
         <FeaturesSection />
-        <WhyDifferentSection />
-        <OurWorksSection />
-        <HowItWorksSection />
-        <CTASection />
+        <ScrollAnimation delay={0.2}>
+          <WhyDifferentSection />
+        </ScrollAnimation>
+        <ScrollAnimation delay={0.4}>
+          <OurWorksSection />
+        </ScrollAnimation>
+        <ScrollAnimation delay={0.6}>
+          <HowItWorksSection />
+        </ScrollAnimation>
+        <ScrollAnimation delay={0.8}>
+          <CTASection />
+        </ScrollAnimation>
         <Footer />
       </div>
     </main>

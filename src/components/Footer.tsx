@@ -1,4 +1,5 @@
 import { Circle } from "lucide-react";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const backgroundStyle = {
     background: 'linear-gradient(145deg, #02050A 0%, #0C121B 50%, #171F2B 100%)'
@@ -10,18 +11,28 @@ const Footer = () => {
           <div className="p-2.5 bg-white rounded-full flex justify-center items-center">
             <Circle className="w-3 h-3 text-black fill-black" />
           </div>
-          <div className="text-white text-xs font-dm-mono font-medium uppercase tracking-wider-2 leading-[16.32px] text-center sm:text-left">
-            Digital Property Platform
+          <div className="text-white text-lg font-space-grotesk font-medium uppercase tracking-wider leading-[20px] text-center sm:text-left">
+            ADOF Labs
           </div>
         </div>
 
         {/* Navigation Links */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16">
-          {["Overview", "Gallery", "About", "Contact"].map(item => <div key={item} className="p-1 flex justify-center items-center">
-              <div className="text-white text-2xl sm:text-[40px] font-space-grotesk font-normal uppercase leading-[28.80px] sm:leading-[38.40px] hover:text-white/80 transition-colors cursor-pointer">
-                {item}
-              </div>
-            </div>)}
+          <Link to="/system-features" className="p-1 flex justify-center items-center">
+            <div className="text-white text-2xl sm:text-[40px] font-space-grotesk font-normal uppercase leading-[28.80px] sm:leading-[38.40px] hover:text-white/80 transition-colors cursor-pointer">
+              System Features
+            </div>
+          </Link>
+          <Link to="/results" className="p-1 flex justify-center items-center">
+            <div className="text-white text-2xl sm:text-[40px] font-space-grotesk font-normal uppercase leading-[28.80px] sm:leading-[38.40px] hover:text-white/80 transition-colors cursor-pointer">
+              Results
+            </div>
+          </Link>
+          <Link to="/schedule-call" className="p-1 flex justify-center items-center">
+            <div className="text-white text-2xl sm:text-[40px] font-space-grotesk font-normal uppercase leading-[28.80px] sm:leading-[38.40px] hover:text-white/80 transition-colors cursor-pointer">
+              Schedule a Call
+            </div>
+          </Link>
         </div>
 
         {/* Copyright and Legal */}
