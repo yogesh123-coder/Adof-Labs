@@ -3,12 +3,10 @@ import revolutCrypto from "@/assets/revolut-crypto.png";
 import ouraRingImage from "@/assets/oura-ring-new.jpg";
 import landedHousesImage from "@/assets/landed-houses.jpg";
 import dezyDentalClinic from "@/assets/dezy-dental-clinic.png";
-
 const OurWorksSection = () => {
   const backgroundStyle = {
     background: 'linear-gradient(145deg, #02050A 0%, #0C121B 50%, #171F2B 100%)'
   };
-
   const projects = [{
     title: "FinTech Revolution",
     client: "Revolut",
@@ -38,9 +36,7 @@ const OurWorksSection = () => {
     image: dezyDentalClinic,
     link: "https://www.dezy.com/clinics/bangalore"
   }];
-
-  return (
-    <section style={backgroundStyle} className="w-full py-16 md:py-24 bg-gray-950">
+  return <section style={backgroundStyle} className="w-full py-16 md:py-24 bg-gray-950">
       <div className="max-w-[1600px] mx-auto px-4 md:px-6 bg-gray-950">
         {/* Header */}
         <div className="text-center mb-16">
@@ -58,15 +54,10 @@ const OurWorksSection = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {projects.map((project, index) => {
-            const CardContent = (
-              <div className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-300 h-full flex flex-col min-h-[500px]">
+          const CardContent = <div className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-300 h-full flex flex-col min-h-[500px]">
                 {/* Project Image */}
                 <div className="aspect-[4/3] bg-white/10 relative overflow-hidden flex-shrink-0">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                  />
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
                 </div>
                 
@@ -95,27 +86,13 @@ const OurWorksSection = () => {
                     <ArrowRight className="w-4 h-4 text-white/40 group-hover:translate-x-1 transition-all" />
                   </div>
                 </div>
-              </div>
-            );
-
-            return project.link ? (
-              <a 
-                key={index} 
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="cursor-pointer"
-              >
+              </div>;
+          return project.link ? <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                 {CardContent}
-              </a>
-            ) : (
-              <div key={index}>{CardContent}</div>
-            );
-          })}
+              </a> : <div key={index}>{CardContent}</div>;
+        })}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default OurWorksSection;
