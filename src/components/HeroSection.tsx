@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center">
           {/* Logo */}
           <div className="flex items-center mb-4 md:mb-0">
-            <img src={adofLogo} alt="ADOF Logo" className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto" />
+            <img src={adofLogo} alt="ADOF Logo" className="h-4 sm:h-5 md:h-6 lg:h-7 w-auto" />
           </div>
           
           {/* Navigation Buttons */}

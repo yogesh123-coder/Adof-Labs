@@ -1,11 +1,16 @@
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import ctaBackground from "@/assets/cta-background.jpg";
 const CTASection = () => {
   const backgroundStyle = {
     background: 'linear-gradient(145deg, #02050A 0%, #0C121B 50%, #171F2B 100%)'
   };
-  return <section style={backgroundStyle} className="w-full py-16 md:py-24 bg-gray-950">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6">
+  return <section className="w-full py-16 md:py-24 bg-gray-950 relative overflow-hidden">
+      {/* Background Image */}
+      <img src={ctaBackground} alt="CTA Background" className="absolute inset-0 w-full h-full object-cover opacity-60" />
+      <div className="absolute inset-0 bg-black/40"></div>
+      
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center">
           {/* Main CTA Content */}
           <div className="mb-12">
