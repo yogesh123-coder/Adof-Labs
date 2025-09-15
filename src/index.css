@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark theme design system */
+    --background: 220 40% 3%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 40% 3%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 40% 3%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 270 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 40% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 40% 10%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 270 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 270 80% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(145deg, #02050A 0%, #0C121B 50%, #171F2B 100%);
+    --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.15) 100%);
+    --gradient-neon: linear-gradient(90deg, #ff6b35 0%, #ffed4a 100%);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Scroll over animation styles */
+.slide-over-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -100vh; /* Negative margin to slide over hero */
+  padding-top: 100vh; /* Add padding to maintain scroll distance */
+  background: transparent;
+}
+
+.slide-over-section section {
+  background: var(--gradient-primary);
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateZ(0); /* Force hardware acceleration */
+  transition: var(--transition-smooth);
+}
+
+.normal-scroll {
+  position: relative;
+  z-index: 10;
+  background: var(--gradient-primary);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
