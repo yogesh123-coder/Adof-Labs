@@ -63,22 +63,20 @@ const WhatIsSystemSection = () => {
   // Auto-progression effect
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
-      setActiveTab(prev => (prev >= tabData.length ? 1 : prev + 1));
+      setActiveTab(prev => prev >= tabData.length ? 1 : prev + 1);
     }, 4000); // Change every 4 seconds
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
-
   const handleTabClick = (tabId: number) => {
     setActiveTab(tabId);
     setIsAutoPlaying(false); // Stop auto-play when user manually selects
-    
+
     // Resume auto-play after 10 seconds of inactivity
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-  return <section className="w-full py-16 md:py-24 bg-primary-gradient">
+  return <section className="w-full py-16 md:py-24 bg-primary-gradient bg-gray-950">
                 <div className="max-w-[1600px] mx-auto px-4 md:px-6">
                     <div className="backdrop-blur-sm rounded-3xl p-6 md:p-10 border border-white/10 bg-gray-950">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
