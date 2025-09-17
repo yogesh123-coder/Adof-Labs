@@ -10,11 +10,11 @@ interface ScrollAnimationProps {
 const ScrollAnimation = ({ children, className = "", delay = 0 }: ScrollAnimationProps) => {
   return (
     <motion.div
-      initial={{ 
-        opacity: 0, 
-        y: 50,
-        clipPath: "inset(0 0 100% 0)"
-      }}
+      // initial={{ 
+      //   opacity: 0, 
+      //   y: 50,
+      //   clipPath: "inset(0 0 100% 0)"
+      // }}
       whileInView={{ 
         opacity: 1, 
         y: 0,

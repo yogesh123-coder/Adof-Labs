@@ -21,7 +21,7 @@ const HowItWorksSection = () => {
     title: "Monitor & Optimize",
     description: "Track performance metrics and optimize your digital asset management in real-time"
   }];
-  return <section style={backgroundStyle} className="w-full py-16 md:py-24 bg-gray-950">
+  return <section style={backgroundStyle} className="w-full py-16 md:py-24 bg-gray-950" id="solutions">
       <div className="max-w-[1600px] mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Steps */}
@@ -58,10 +58,10 @@ const HowItWorksSection = () => {
           {/* Right: Demo Video */}
           <div className="relative">
             <div className="aspect-video rounded-2xl border border-white/10 overflow-hidden group cursor-pointer hover:border-white/20 transition-all relative">
-              <img src={processDiagram} alt="Business Process Diagram" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all flex items-center justify-center">
+              <img src={processDiagram} alt="Business Process Diagram" className="w-full h-full object-contain" />
+              {/* <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all flex items-center justify-center">
                 
-              </div>
+              </div> */}
             </div>
             
             {/* Floating Elements */}

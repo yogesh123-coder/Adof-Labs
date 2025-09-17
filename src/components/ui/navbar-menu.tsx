@@ -14,24 +14,36 @@ const transition = {
 
 export const MenuItem = ({
   setActive,
-  active,
+
   item,
   children,
+  href,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  href: string;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
-      <motion.p
+      <motion.a
+        href={href}
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-white/90 hover:text-white text-sm font-medium"
+        onClick={(e) => {
+          e.preventDefault(); // default anchor behavior rok do
+          const element = document.getElementById(item.toLowerCase());
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+            history.pushState(null, "", `#${item.toLowerCase()}`); // ✅ URL update karega, bina jump ke
+          }
+        }}
+        className=" cursor-pointer text-white/90 hover:text-white text-sm font-medium"
       >
         {item}
-      </motion.p>
-      {active !== null && (
+      </motion.a>
+
+      {/* {active !== null && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -44,17 +56,14 @@ export const MenuItem = ({
                 layoutId="active"
                 className="bg-black/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 shadow-xl"
               >
-                <motion.div
-                  layout
-                  className="w-max h-full p-4"
-                >
+                <motion.div layout className="w-max h-full p-4">
                   {children}
                 </motion.div>
               </motion.div>
             </div>
           )}
         </motion.div>
-      )}
+      )} */}
     </div>
   );
 };
@@ -76,7 +85,15 @@ export const Menu = ({
   );
 };
 
-export const HoveredLink = ({ children, to, ...rest }: { children: React.ReactNode; to: string; [key: string]: any }) => {
+export const HoveredLink = ({
+  children,
+  to,
+  ...rest
+}: {
+  children: React.ReactNode;
+  to: string;
+  [key: string]: any;
+}) => {
   return (
     <Link
       to={to}

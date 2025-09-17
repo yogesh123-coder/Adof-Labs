@@ -37,7 +37,7 @@ const OurWorksSection = () => {
     link: "https://www.dezy.com/clinics/bangalore"
   }];
   return <section style={backgroundStyle} className="w-full py-16 md:py-24 bg-gray-950">
-      <div className="max-w-[1600px] mx-auto px-4 md:px-6 bg-gray-950">
+      <div className="max-w-[1600px] mx-auto px-4 md:px-6 bg-gray-950" id="results">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-white/60 font-poppins text-sm uppercase tracking-[0.15em] leading-[1.6] mb-6 block">

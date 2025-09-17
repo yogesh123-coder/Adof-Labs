@@ -35,7 +35,7 @@ const FeaturesSection = () => {
     description: "Worldwide infrastructure ensuring reliable access and performance across all regions",
     className: "md:col-span-1"
   }];
-  return <section style={backgroundStyle} className="w-full py-16 md:py-24 bg-gray-950">
+  return <section style={backgroundStyle} id="system" className="w-full py-16 md:py-24 bg-gray-950">
       <div className="max-w-[1600px] mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-16">

@@ -7,6 +7,9 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  html,body {
+    scroll-behavior: smooth;
+  }
   :root {
     /* Dark theme design system */
     --background: 220 40% 3%;
@@ -40,10 +43,19 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Custom gradients */
-    --gradient-primary: linear-gradient(145deg, #02050A 0%, #0C121B 50%, #171F2B 100%);
-    --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.15) 100%);
+    --gradient-primary: linear-gradient(
+      145deg,
+      #02050a 0%,
+      #0c121b 50%,
+      #171f2b 100%
+    );
+    --gradient-glass: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.01) 0%,
+      rgba(255, 255, 255, 0.15) 100%
+    );
     --gradient-neon: linear-gradient(90deg, #ff6b35 0%, #ffed4a 100%);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -53,17 +65,36 @@ All colors MUST be HSL.
 .slide-over-section {
   position: relative;
   z-index: 10;
-  margin-top: -100vh; /* Negative margin to slide over hero */
-  padding-top: 100vh; /* Add padding to maintain scroll distance */
+  margin-top: -100vh; /* Keep your slide effect */
+  padding-top: 100vh; /* Keep your padding */
   background: transparent;
+
+  /* KEY FIX: Disable pointer events on the container */
+  pointer-events: none;
 }
 
 .slide-over-section section {
   background: var(--gradient-primary);
   border-radius: 2rem 2rem 0 0;
   box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.4);
-  transform: translateZ(0); /* Force hardware acceleration */
+  transform: translateZ(0);
   transition: var(--transition-smooth);
+
+  /* Re-enable pointer events on the actual content */
+  pointer-events: auto;
+}
+
+/* Make sure all interactive elements inside work */
+.slide-over-section section * {
+  pointer-events: auto;
+}
+
+/* Ensure navbar stays above everything */
+nav,
+.navbar {
+  position: relative !important;
+  z-index: 50 !important;
+  pointer-events: auto !important;
 }
 
 .normal-scroll {
