@@ -19,7 +19,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="flex items-center gap-6">
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/adoflabs?igsh=OW53ZjE2bXQwbzN4" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200"
@@ -27,7 +27,7 @@ const Footer = () => {
             <Instagram className="w-5 h-5 text-white" />
           </a>
           <a 
-            href="https://youtube.com" 
+            href="https://youtube.com/@adoflabs?si=-mZMSYbS0HPqJCxt" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200"
@@ -35,7 +35,7 @@ const Footer = () => {
             <Youtube className="w-5 h-5 text-white" />
           </a>
           <a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/share/1AzEdT8xB5/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200"
@@ -51,7 +51,7 @@ const Footer = () => {
             <Linkedin className="w-5 h-5 text-white" />
           </a>
           <a 
-            href="https://twitter.com" 
+            href="https://x.com/Adoflabs?t=s8rpbeQguwvaX3-qy7zxTg&s=09" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200"

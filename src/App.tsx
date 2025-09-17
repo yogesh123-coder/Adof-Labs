@@ -23,7 +23,7 @@ const App = () => (
         <Toaster
           position="top-right"
           containerStyle={{
-            marginTop: window.innerWidth >= 768 ? "72px" : "56px",
+            marginTop: window.innerWidth >= 768 ? "72px" : "62px",
           }}
         />
         {/* </div> */}

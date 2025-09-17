@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import Footer from "@/components/Footer";
 
 const ScheduleCall = () => {
   const backgroundStyle = {
@@ -275,7 +276,7 @@ const ScheduleCall = () => {
 
                 <div className="pt-4">
                   <a
-                    href="https://wa.me/message/JNSZQCPLZ4KNM1"
+                    href="https://wa.me/919752322070"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg transition-colors w-full justify-center"
@@ -305,6 +306,7 @@ const ScheduleCall = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

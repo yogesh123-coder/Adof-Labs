@@ -8,11 +8,13 @@ import adofLogo from "@/assets/adof_logo.png";
 export function NavbarMenu() {
   const [active, setActive] = useState<string | null>(null);
 
+ 
+
   return (
     <div className="relative w-full flex items-center justify-between px-4 md:px-6 py-4">
       {/* Logo */}
       <div className="flex items-center">
-        <img src={adofLogo} alt="ADOF Logo" className="h-6 md:h-8 w-auto" />
+        <img src={adofLogo} alt="ADOF Logo" className="h-6 md:h-8 w-auto"/>
       </div>
 
       {/* Desktop Navigation */}
@@ -60,7 +62,7 @@ export function NavbarMenu() {
 
       {/* CTA Button */}
       <a
-        href="https://wa.me/message/JNSZQCPLZ4KNM1 "
+        href="https://wa.me/919752322070 "
         className="px-4 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-white/90 transition-all duration-200"
       >
         Schedule Call
