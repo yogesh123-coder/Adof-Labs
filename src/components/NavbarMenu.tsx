@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -7,6 +7,15 @@ import adofLogo from "@/assets/adof_logo.png";
 
 export function NavbarMenu() {
   const [active, setActive] = useState<string | null>(null);
+   useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
 
  
 
